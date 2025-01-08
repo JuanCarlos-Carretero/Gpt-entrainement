@@ -35,7 +35,7 @@ git clone https://github.com/JuanCarlos-Carretero/Gpt-entrainement.git
 - WildFly - Serveur d'applications
 - PrimeFaces - Bibliothèque de composants d'interface utilisateur pour JSF
 
-### Problèmes communs et solutions
+### Problèmes trouves et solutions
 
 - Problème de connexion entre eclipse et base de donne oracle (Oracle Database 23ai FREE)
 Il faut ouvrir la perspective "Database Development". Creer une nouvelle connexion avec "Oracle". Aprés il faudra choissir un Driver (11 dans mon cas) et dans les proprietes il faudra Donner un nom a la base de donne, mettre la URL (jdbc:oracle:thin:@localhost:1521/FREEPDB1), choissir un utilisateur (hr) et mettre le mot de passe (oracle)
