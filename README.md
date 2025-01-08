@@ -31,7 +31,7 @@ git clone https://github.com/JuanCarlos-Carretero/Gpt-entrainement.git
 ### Problèmes trouves et solutions
 
 - Problème de connexion entre eclipse et base de donne oracle (Oracle Database 23ai FREE)
-Il faut ouvrir la perspective "Database Development". Creer une nouvelle connexion avec "Oracle". Aprés il faudra choissir un Driver (11 dans mon cas) et dans les proprietes il faudra Donner un nom a la base de donne, mettre la URL (jdbc:oracle:thin:@localhost:1521/FREEPDB1), choissir un utilisateur (hr) et mettre le mot de passe (oracle)
+Il faut ouvrir la perspective "Database Development". Creer une nouvelle connexion avec "Oracle". Aprés il faudra choissir un Driver (11 dans mon cas) et dans les proprietes il faudra donner un nom a la base de donne, mettre la URL (jdbc:oracle:thin:@localhost:1521/FREEPDB1), choissir un utilisateur (hr) et mettre le mot de passe (oracle)
 
 - Problème de creation automatique de JPA a partir d'une table Oracle
 Differencier entre les nouvelles versions de Jakarta.persistence.* et Javax.persistence.* et donner des droits d'ecriture dans le cas ou on a pas les droits d'ecrire.
