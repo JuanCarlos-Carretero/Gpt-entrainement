@@ -4,14 +4,22 @@ Projet pour m'entrener dans Java EE.
 
 ## Prérequis
 
-IDE : Eclipse 12/24, 
-Java : JDK11, 
-WildFly : 17.0.0.Final, 
-Mvn : 4, 
-PrimeFaces : 8, 
-JPA : Javax.persistence.api 2.2, 
-JDBC : ojdbc8, 
-CDI : cdi-api 2.0.SP1, 
+IDE : Eclipse 12/24
+
+Java : JDK11
+
+WildFly : 17.0.0.Final
+
+Mvn : 4
+
+PrimeFaces : 8
+
+JPA : Javax.persistence.api 2.2
+
+JDBC : ojdbc8
+
+CDI : cdi-api 2.0.SP1
+
 JSP : javax.faces-api 2.3
 
 ### Installation
