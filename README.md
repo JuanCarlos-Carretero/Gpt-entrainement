@@ -9,8 +9,12 @@ Projet pour m'entrener dans Java EE.
   ```
   -  Swagger
   ```bash
-  http://localhost:8080/Gpt-entrainement/api/hello
+  http://localhost:8080/Gpt-entrainement/swagger-ui.html
   ```
+  -  Api
+  ```bash
+  http://localhost:8080/Gpt-entrainement/api/hello
+   ```
 
 ## Prérequis
 ```bash
