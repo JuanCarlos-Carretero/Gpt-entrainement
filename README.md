@@ -2,6 +2,20 @@
 
 Projet pour m'entrener dans Java EE.
 
+### Urls
+  -  Page PrimeFaces
+  ```bash
+  http://localhost:8080/Gpt-entrainement/index.xhtml
+  ```
+  -  Swagger UI
+  ```bash
+  http://localhost:8080/Gpt-entrainement/swagger-ui.html
+  ```
+  -  Api
+  ```bash
+  http://localhost:8080/Gpt-entrainement/api/hello
+   ```
+
 ## Prérequis
 ```bash
 IDE : Eclipse 12/24
