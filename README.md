@@ -7,7 +7,7 @@ Projet pour m'entrener dans Java EE.
   ```bash
   http://localhost:8080/Gpt-entrainement/index.xhtml
   ```
-  -  Swagger
+  -  Swagger UI
   ```bash
   http://localhost:8080/Gpt-entrainement/swagger-ui.html
   ```
