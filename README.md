@@ -9,11 +9,11 @@ Projet pour m'entrener dans Java EE.
   ```
   -  Swagger UI
   ```bash
-  http://localhost:8080/Gpt-entrainement/swagger-ui.html
+  http://localhost:8080/Gpt-entrainement/swagger-ui/dist/index.html#/
   ```
   -  Api
   ```bash
-  http://localhost:8080/Gpt-entrainement/api/hello
+  http://localhost:8080/Gpt-entrainement/api/openapi.json
    ```
 
 ## Prérequis
@@ -27,6 +27,7 @@ JPA : Javax.persistence.api 2.2
 JDBC : ojdbc8
 CDI : cdi-api 2.0.SP1
 JSP : javax.faces-api 2.3
+Swagger-UI : 3.0
 ```
 
 ### Installation
@@ -41,6 +42,7 @@ git clone https://github.com/JuanCarlos-Carretero/Gpt-entrainement.git
 - Maven - Gestionnaire de dépendances
 - WildFly - Serveur d'applications
 - PrimeFaces - Bibliothèque de composants d'interface utilisateur pour JSF
+- Swagger (Open API)
 
 ### Problèmes trouves et solutions
 
