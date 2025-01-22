@@ -11,6 +11,9 @@ import io.swagger.v3.oas.integration.SwaggerConfiguration;
 import io.swagger.v3.oas.integration.api.OpenApiContext;
 
 import java.util.Collections;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 import javax.servlet.ServletConfig;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Context;
@@ -33,7 +36,8 @@ public class JerseyConfig extends ResourceConfig {
         // Configure SwaggerConfiguration
         SwaggerConfiguration oasConfig = new SwaggerConfiguration()
             .openAPI(openAPI)
-            .prettyPrint(true);
+            .prettyPrint(true)
+            .resourcePackages(Stream.of("com.entrainement.rest").collect(Collectors.toSet()));
 
         try {
             // Initialise le contexte de Swagger avec la configuration
