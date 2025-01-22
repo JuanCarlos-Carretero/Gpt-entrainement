@@ -3,6 +3,7 @@ package com.entrainement.model;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.util.List;
+import java.util.Objects;
 
 
 /**
@@ -80,5 +81,25 @@ public class Country implements Serializable {
 
 		return location;
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(countryId, countryName, locations, region);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Country other = (Country) obj;
+		return Objects.equals(countryId, other.countryId) && Objects.equals(countryName, other.countryName)
+				&& Objects.equals(locations, other.locations) && Objects.equals(region, other.region);
+	}
+	
+	
 
 }
