@@ -18,13 +18,13 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 public class EmployeeResource {
 	
 	@Inject
-	private EmployeeService empService;
+	private EmployeeService employeeService;
 
     @GET // Indique que cette méthode répondra aux requêtes HTTP GET.
     @Operation(summary = "Obtenir tous les employés", tags = {"Employee"})
     @Produces(MediaType.APPLICATION_JSON) // Spécifie que la réponse sera au format JSON.
     public Response getEmployees() {
-    	List<Employee> allEmployee = empService.getAllEmployees();
+    	List<Employee> allEmployee = employeeService.getAllEmployees();
         return Response.ok(allEmployee).build();
     }
 
@@ -33,7 +33,7 @@ public class EmployeeResource {
     @Operation(summary = "Obtenir un employé par ID", tags = {"Employee"})
     @Produces(MediaType.APPLICATION_JSON)
     public Response getEmployee(@PathParam("id") int id) {
-        Employee emp = empService.getEmployeeById(id);
+        Employee emp = employeeService.getEmployeeById(id);
         return Response.ok(emp).build();
     }
 
@@ -42,7 +42,7 @@ public class EmployeeResource {
     @Consumes(MediaType.APPLICATION_JSON) // Spécifie que la méthode s'attend à recevoir des données au format JSON.
     @Produces(MediaType.APPLICATION_JSON)
     public Response createEmployee(Employee employee) {
-        empService.insertEmployee(employee);
+        employeeService.insertEmployee(employee);
         return Response.status(Response.Status.CREATED).entity(employee).build();
     }
 
@@ -52,7 +52,7 @@ public class EmployeeResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response updateEmployee(@PathParam("id") int id, Employee employee) {
-        empService.updateEmployee(id, employee);
+        employeeService.updateEmployee(id, employee);
         return Response.ok(employee).build();
     }
 
@@ -61,7 +61,7 @@ public class EmployeeResource {
     @Operation(summary = "Effacer un employé par ID", tags = {"Employee"})
     @Path("/{id}")
     public Response deleteEmployee(@PathParam("id") int id) {
-        empService.deleteEmployee(id);
+        employeeService.deleteEmployee(id);
         return Response.noContent().build();
     }
 }

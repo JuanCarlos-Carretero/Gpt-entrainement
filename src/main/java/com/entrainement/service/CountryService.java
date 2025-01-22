@@ -24,8 +24,8 @@ public class CountryService {
     }
 
     @Transactional
-    public void insertCountry(Country Country) {
-        countryDao.insertObject(Country);
+    public void insertCountry(Country country) {
+        countryDao.insertObject(country);
     }
 
     @Transactional

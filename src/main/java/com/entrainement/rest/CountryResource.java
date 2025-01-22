@@ -18,13 +18,13 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 public class CountryResource {
 	
 	@Inject
-	private CountryService couService;
+	private CountryService countryService;
 
     @GET // Indique que cette méthode répondra aux requêtes HTTP GET.
     @Operation(summary = "Obtenir tous les pays", tags = {"Country"})
     @Produces(MediaType.APPLICATION_JSON) // Spécifie que la réponse sera au format JSON.
     public Response getCountry() {
-    	List<Country> allCountry = couService.getAllCountrys();
+    	List<Country> allCountry = countryService.getAllCountrys();
         return Response.ok(allCountry).build();
     }
 
@@ -33,7 +33,7 @@ public class CountryResource {
     @Operation(summary = "Obtenir un pays par ID", tags = {"Country"})
     @Produces(MediaType.APPLICATION_JSON)
     public Response getCountry(@PathParam("id") int id) {
-        Country emp = couService.getCountryById(id);
+        Country emp = countryService.getCountryById(id);
         return Response.ok(emp).build();
     }
 
@@ -41,9 +41,9 @@ public class CountryResource {
     @Operation(summary = "Creer un pays", tags = {"Country"})
     @Consumes(MediaType.APPLICATION_JSON) // Spécifie que la méthode s'attend à recevoir des données au format JSON.
     @Produces(MediaType.APPLICATION_JSON)
-    public Response createCountry(Country Country) {
-        couService.insertCountry(Country);
-        return Response.status(Response.Status.CREATED).entity(Country).build();
+    public Response createCountry(Country country) {
+        countryService.insertCountry(country);
+        return Response.status(Response.Status.CREATED).entity(country).build();
     }
 
     @PUT
@@ -51,9 +51,9 @@ public class CountryResource {
     @Operation(summary = "Modifier un pays par ID", tags = {"Country"})
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response updateCountry(@PathParam("id") int id, Country Country) {
-        couService.updateCountry(id, Country);
-        return Response.ok(Country).build();
+    public Response updateCountry(@PathParam("id") int id, Country country) {
+        countryService.updateCountry(id, country);
+        return Response.ok(country).build();
     }
 
 
@@ -61,7 +61,7 @@ public class CountryResource {
     @Operation(summary = "Effacer un pays par ID", tags = {"Country"})
     @Path("/{id}")
     public Response deleteCountry(@PathParam("id") int id) {
-        couService.deleteCountry(id);
+        countryService.deleteCountry(id);
         return Response.noContent().build();
     }
 }
