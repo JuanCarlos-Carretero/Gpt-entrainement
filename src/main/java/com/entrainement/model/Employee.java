@@ -51,7 +51,7 @@ public class Employee implements Serializable {
 	private BigDecimal salary;
 
 	//bi-directional many-to-one association to Department
-	@OneToMany(mappedBy="employee")
+	@OneToMany(mappedBy = "employee", fetch = FetchType.EAGER)
 	private List<Department> departments;
 
 	//bi-directional many-to-one association to Department
@@ -65,7 +65,7 @@ public class Employee implements Serializable {
 	private Employee employee;
 
 	//bi-directional many-to-one association to Employee
-	@OneToMany(mappedBy="employee")
+	@OneToMany(mappedBy="employee", fetch = FetchType.LAZY)
 	private List<Employee> employees;
 
 	//bi-directional many-to-one association to Job

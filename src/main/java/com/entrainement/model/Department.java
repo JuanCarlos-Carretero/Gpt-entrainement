@@ -34,7 +34,7 @@ public class Department implements Serializable {
 	private Location location;
 
 	//bi-directional many-to-one association to Employee
-	@OneToMany(mappedBy="department")
+	@OneToMany(mappedBy="department", fetch = FetchType.LAZY)
 	private List<Employee> employees;
 
 	public Department() {

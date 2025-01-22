@@ -31,7 +31,7 @@ public class Job implements Serializable {
 	private BigDecimal minSalary;
 
 	//bi-directional many-to-one association to Employee
-	@OneToMany(mappedBy="job")
+	@OneToMany(mappedBy="job", fetch = FetchType.LAZY)
 	private List<Employee> employees;
 
 	public Job() {

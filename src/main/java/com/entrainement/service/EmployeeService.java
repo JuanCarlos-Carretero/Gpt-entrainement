@@ -25,7 +25,7 @@ public class EmployeeService {
 
     @Transactional
     public void insertEmployee(Employee employee) {
-        employeeDao.insertEmployee(employee);
+        employeeDao.insertObject(employee);
     }
 
     @Transactional
@@ -33,13 +33,13 @@ public class EmployeeService {
         Employee existingEmployee = employeeDao.findEmployeeById(id);
         if (existingEmployee != null) {
             buildEmployee(existingEmployee, employee);
-            employeeDao.updateEmployee(existingEmployee);
+            employeeDao.updateObject(existingEmployee);
         }
     }
 
     @Transactional
     public void deleteEmployee(int id) {
-        employeeDao.deleteEmployee(getEmployeeById(id));
+        employeeDao.deleteObject(getEmployeeById(id));
     }
     
     public Employee buildEmployee(Employee empl1, Employee empl2){

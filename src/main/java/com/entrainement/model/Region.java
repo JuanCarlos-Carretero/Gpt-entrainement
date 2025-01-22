@@ -24,7 +24,7 @@ public class Region implements Serializable {
 	private String regionName;
 
 	//bi-directional many-to-one association to Country
-	@OneToMany(mappedBy="region")
+	@OneToMany(mappedBy="region", fetch = FetchType.LAZY)
 	private List<Country> countries;
 
 	public Region() {

@@ -12,6 +12,27 @@
     	<!-- Etiquette pour Log
     	<p:log id="log" />
     	-->
+    	<!-- Employee -->
+    	<p:dataTable var="employee" value="#{yourBean.searchAllEmployee()}" widgetVar="employeeTable">
+            <p:column headerText="Nom">
+                <h:outputText value="#{employee.lastName}" />
+            </p:column>
+            <p:column headerText="Prenom">
+                <h:outputText value="#{employee.firstName}" />
+            </p:column>
+            <p:column headerText="Email">
+                <h:outputText value="#{employee.email}" />
+            </p:column>
+            <p:column headerText="Telephone">
+                <h:outputText value="#{employee.phoneNumber}" />
+            </p:column>
+            <p:column headerText="Department">
+                <h:outputText value="#{employee.department.departmentName}" />
+            </p:column>
+            <p:column headerText="Salaire">
+                <h:outputText value="#{employee.salary}" />
+            </p:column>
+        </p:dataTable>
 	</h:form>
 </h:body>
 </html>

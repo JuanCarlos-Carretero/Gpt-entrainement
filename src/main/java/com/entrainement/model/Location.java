@@ -33,7 +33,7 @@ public class Location implements Serializable {
 	private String streetAddress;
 
 	//bi-directional many-to-one association to Department
-	@OneToMany(mappedBy="location")
+	@OneToMany(mappedBy="location", fetch = FetchType.LAZY)
 	private List<Department> departments;
 
 	//bi-directional many-to-one association to Country
